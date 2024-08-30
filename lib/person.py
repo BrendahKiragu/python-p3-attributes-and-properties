@@ -28,7 +28,6 @@ class Person:
     def set_name (self, name):
         if (type(name) == str and 1 <= len(name) <= 25 ):
             self._name = name.title()
-            print(f"Name has been set to {self._name}")  
         else:
             print("Name must be string between 1 and 25 characters.")      
         pass
@@ -43,7 +42,7 @@ class Person:
         if job in APPROVED_JOBS:
             self._job = job
         else:
-            print('Job must be in list of approved jobs.')    
+            print("Job must be in list of approved jobs.")    
             
     job = property(get_job, set_job)     
 
